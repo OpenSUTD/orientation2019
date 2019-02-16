@@ -1,0 +1,176 @@
+@font-face {
+    font-family: calculator;
+    src: url("../fonts/calculator.ttf");
+}
+
+.loaderText {
+    font-family: calculator;
+    text-transform: capitalize;
+}
+@keyframes flicker {
+    0%,
+    100%,
+    12%,
+    18.999%,
+    23%,
+    31.999%,
+    37%,
+    44.999%,
+    46%,
+    49.999%,
+    51%,
+    58.999%,
+    61%,
+    68.999%,
+    71%,
+    85.999%,
+    96% {
+        opacity: 0.99;
+        text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+    }
+
+    19%,
+    22.99%,
+    32%,
+    36.999%,
+    45%,
+    45.999%,
+    50%,
+    50.99%,
+    59%,
+    60.999%,
+    69%,
+    70.999%,
+    86%,
+    95.999% {
+        opacity: 0.4;
+        text-shadow: none;
+    }
+}
+
+body {
+    color: white;
+    background-color: black;
+    width: 100%;
+    overflow: hidden;
+}
+
+loader h1 span {}
+
+loader h1 span.loading {
+    opacity: 0.2;
+}
+
+loader .loaderRing {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    filter: drop-shadow(0px 0px 12px rgb(255, 0, 0));
+}
+
+loader .loaderRing .loaderRingCircle {
+    transition: 0.35s stroke-dashoffset;
+    // axis compensation
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+loader .loaderRing.ready {
+    filter: drop-shadow(0px 0px 12px rgb(255, 255, 255));
+    opacity: 0.5;
+}
+
+loader .loaderRing.start {
+    filter: none
+}
+
+loader h1 span.loaded {
+    animation: flicker 3s infinite linear;
+    opacity: 0.5;
+}
+
+loader h1 span.ready {
+    color: blue;
+    text-shadow: 0 0 80px blue;
+}
+
+loader h1 span.start {
+    color: white;
+    animation-name: loaderTextStartAnimation;
+    animation-duration: 1s;
+    text-shadow: 0 0 80px blue;
+}
+@keyframes loaderTextStartAnimation {
+    0%,
+    100%,
+    50% {
+        color: white;
+    }
+
+    25%,
+    75% {
+        color: blue;
+    }
+}
+
+loader.exit {
+    animation-name: loaderExitAnimation;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+}
+@keyframes loaderExitAnimation {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+loader {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+.globe {
+    position: absolute;
+}
+
+.globe.loading {
+    visibility: hidden;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: auto;
+}
+
+.globe.start {
+    visibility: visible;
+}
+
+.globe line.start,
+path.start,
+polygon.start,
+polyline.start {
+    animation: globeDraw 1.5s linear forwards;
+}
+@keyframes globeDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+content.loading {
+    visibility: hidden;
+}
+
+content.loaded {
+    visibility: visible;
+}

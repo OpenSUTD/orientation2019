@@ -1,93 +1,48 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        <title>OLEROS</title>
+        <link href="{{asset('css/preloader.css')}}" rel="stylesheet"/>
+        <script src="{{asset('js/preloader.js')}}"></script>
+        <script defer src="{{asset('js/app.js')}}"></script>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    SUTD Orientation 2019
-                    <div><small>coming soon</small></div>
-                </div>
-
-                <div class="links">
-                </div>
-            </div>
+      <loader>
+        <h1 class="loaderText">
+          <span class="loading">L</span>
+          <span class="loading">o</span>
+          <span class="loading">a</span>
+          <span class="loading">d</span>
+          <span class="loading">i</span>
+          <span class="loading">n</span>
+          <span class="loading">g</span>
+          <span class="loading"></span>
+          <span class="loading"></span>
+          <span class="loading"></span>
+          <span class="loading"></span>
+        </h1>
+        <svg class="loaderRing" viewBox="0 0 100 100">
+          <circle
+            class="loaderRingCircle"
+            stroke="white"
+            stroke-width="0.5"
+            fill="transparent"
+            cx="50%"
+            cy="50%"
+            r="7.5"/>
+        </svg>
+      </loader>
+      <content class="loading">
+        <div id="logosection">
+          @include("globe")
         </div>
+        <img src="https://c2.staticflickr.com/8/7872/46343981674_c825302cf5_o.jpg">
+        <img src="https://i.redd.it/zku2zx4dk9g21.jpg">
+        <img src="https://i.redd.it/5hv4l3032bc01.jpg">
+        <img src="https://i.redd.it/9d9w6pkirihz.jpg">
+        <img src="https://i.redd.it/4itnc1ff4us01.jpg">
+      </content>
     </body>
 </html>
