@@ -1,14 +1,152 @@
+@font-face {
+    font-family: phage;
+    src: url("../fonts/phage_regular.otf");
+}
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+#logo {
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10%,-50%);
+}
 
-// Variables
-@import 'variables';
+.globeParent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10%,-50%);
+    width: 65%;
+    height: auto;
+}
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+.globe {
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+}
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.title {
+    font-size: 9vw;
+    font-family: calculator;
+    text-align: center;
+}
+
+.frame-title {
+    font-size: 9vw;
+    font-family: calculator;
+}
+
+.subtitle {
+    margin-top: 5%;
+    font-size: 2vw;
+    font-family: Tahoma;
+    text-align: center;
+}
+
+.frame-subtitle {
+    margin-top: 5%;
+    font-size: 2vw;
+    font-family: Tahoma;
+}
+
+.frame-largetext {
+    font-size: 2.5vw;
+    font-family: Tahoma;
+}
+
+#logosection {
+    position: relative;
+}
+
+#logosection * {}
+
+#main_description {
+    font-size: 1.6vw;
+    font-family: Tahoma;
+    margin: 5%;
+}
+
+.frame {
+    width: 100%;
+    height: auto;
+}
+
+.frame > * {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.frame:nth-child(4) {
+    background-image: url("/img/frame_2.jpg");
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full {
+    height: 100vh;
+}
+
+.subframe {
+    display: inline-block;
+}
+
+.content_frame {
+    width: auto;
+    height: 94%;
+    margin: 1% 5%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.backgrounds {
+    position: fixed;
+    z-index: -9001;
+    top: 0;
+    left: 0;
+}
+
+.backgrounds img {
+    position: absolute;
+    z-index: -9001;
+    min-width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.house_names {
+    font-family: phage;
+    font-size: 6em;
+    text-align: center;
+}
+
+.house_nicknames {
+    font-family: phage;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.house_lore {
+    font-family: Tahoma;
+    font-size: 1.5em;
+    margin: 5% 1%;
+}
+
+#maps iframe {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+content {
+    width: 100%;
+    height: auto;
 }

@@ -51,8 +51,6 @@
 body {
     color: white;
     background-color: black;
-    width: 100%;
-    overflow: hidden;
 }
 
 loader h1 span {}
@@ -138,39 +136,7 @@ loader {
     left: 50%;
 }
 
-.globe {
-    position: absolute;
-}
-
-.globe.loading {
-    visibility: hidden;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    width: 30%;
-    height: auto;
-}
-
-.globe.start {
-    visibility: visible;
-}
-
-.globe line.start,
-path.start,
-polygon.start,
-polyline.start {
-    animation: globeDraw 1.5s linear forwards;
-}
-@keyframes globeDraw {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
 
 content.loading {
     visibility: hidden;
-}
-
-content.loaded {
-    visibility: visible;
 }

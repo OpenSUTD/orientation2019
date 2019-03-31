@@ -58,6 +58,7 @@ return [
     'commands' => [
         Telegram\Bot\Commands\HelpCommand::class,
         App\TelegramBot\Commands\HelloCommand::class,
+        App\TelegramBot\Commands\RegisterCommand::class,
         App\TelegramBot\Commands\KeyCommand::class,
         App\TelegramBot\Commands\PingCommand::class,
     ],

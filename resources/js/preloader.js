@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var circumference = radius * 2 * Math.PI;
     circle.style.strokeDasharray = `${circumference} ${circumference}`;
     circle.style.strokeDashoffset = `${circumference}`;
+    //count cached items
+    current = Array.from(document.querySelectorAll("content *")).reduce((sum, elem) =>
+        sum + ((elem.complete && elem.naturalHeight !== 0) ? 1 : 0),0);
     document.querySelectorAll("content *").forEach(function(elem, i) {
         elem.addEventListener("load", function() {
             console.log("loaded");
