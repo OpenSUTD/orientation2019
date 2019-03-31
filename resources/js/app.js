@@ -129,10 +129,10 @@ window.start = function() {
         setTimeout(blur, 200);
     });
     document.body.addEventListener("mousemove", function(e) {
-        let x = (e.screenX / window.innerWidth) - 0.5;
-        let y = (e.screenY / window.innerHeight) - 0.5;
-        let xShift = 10 * x;
-        let yShift = 10 * y;
+        let x = (e.screenX / window.innerWidth) - 1;
+        let y = (e.screenY / window.innerHeight) - 1;
+        let xShift = 50 * x;
+        let yShift = 50 * y;
         $(".backgrounds img").first().css("transform", "translate(" + xShift + "px," + yShift + "px)");
     });
     delete window.start;
