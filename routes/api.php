@@ -15,10 +15,9 @@ use Illuminate\Http\Request;
 
 Route::post('telegram/'.env('TELEGRAM_ENDPOINT_SECRET'), function (Request $request) {
     $update = Telegram::commandsHandler(true);
-    if(isset($update->get("callback_query")){
-      
+    if ($update->get('callback_query') == null) {
     }
-    Log::debug(var_export($update,true));
+    Log::debug(var_export($update, true));
 
     return 'ok';
 });
