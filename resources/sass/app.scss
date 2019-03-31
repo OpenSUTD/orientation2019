@@ -34,25 +34,35 @@
 
 .frame-title {
     font-size: 9vw;
+    text-align: center;
     font-family: calculator;
 }
 
 .subtitle {
     margin-top: 5%;
     font-size: 2vw;
-    font-family: Tahoma;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    font-family: "Andale Mono", "Consolas", "Courier New";
     text-align: center;
 }
 
 .frame-subtitle {
     margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
     font-size: 2vw;
-    font-family: Tahoma;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    font-family: "Andale Mono", "Consolas", "Courier New";
 }
 
 .frame-largetext {
-    font-size: 2.5vw;
-    font-family: Tahoma;
+    font-size: 2vw;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    font-family: "Andale Mono", "Consolas", "Courier New";
 }
 
 #logosection {
@@ -97,9 +107,9 @@
 
 .content_frame {
     width: auto;
-    height: 94%;
-    margin: 1% 5%;
-    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    margin: 2% 10%;
+    // background-color: rgba(0,0,0,0.5);
 }
 
 .backgrounds {
@@ -130,8 +140,19 @@
 }
 
 .house_lore {
-    font-family: Tahoma;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    font-family: "Andale Mono", "Consolas", "Courier New";
     font-size: 1.5em;
+    margin: 5% 1%;
+}
+
+.contact-info{
+    letter-spacing: 0.5px;
+    justify-content: center;
+    text-align: left !important;
+    font-family: "Andale Mono", "Consolas", "Courier New";
+    font-size: 1.0em;
     margin: 5% 1%;
 }
 

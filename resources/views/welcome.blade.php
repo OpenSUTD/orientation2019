@@ -82,7 +82,7 @@
               </div>
             </div>
             <div class="content_frame flex" data-aos="fade-right">
-              <div style="width:30%;height:auto;" class="subframe">
+              <div style="width:30%;height:auto;margin-right:5%" class="subframe">
                 <img src="{{asset('img/nova.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_lore"><em>The gunblade, forgable from any abundant metal in the universe.</em></p>
               </div>
@@ -93,7 +93,7 @@
               </div>
             </div>
             <div class="content_frame flex" data-aos="fade-right">
-              <div style="width:30%;height:auto;" class="subframe">
+              <div style="width:30%;height:auto;margin-right:5%" class="subframe">
                 <img src="{{asset('img/vela.svg')}}" class="house_logo" data-aos="fade-right"><p class="house_lore"><em>The compound bow, with a range further than what one would expect.</em></p>
               </div>
               <div style="width:70%;height:auto;margin-top:5%;float:right" class="subframe">
@@ -103,7 +103,7 @@
               </div>
             </div>
             <div class="content_frame flex" data-aos="fade-right">
-              <div style="width:30%;height:auto;" class="subframe">
+              <div style="width:30%;height:auto;margin-right:5%" class="subframe">
                 <img src="{{asset('img/pyxis.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_lore"><em>The naginata, boasting a large angle of attack protecting its users from ambush</em></p>
               </div>
@@ -114,7 +114,7 @@
               </div>
             </div>
             <div class="content_frame flex" data-aos="fade-right">
-              <div style="width:30%;height:auto;" class="subframe">
+              <div style="width:30%;height:auto;margin-right:5%" class="subframe">
                 <img src="{{asset('img/auryx.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_lore"><em>The mystic staff, dangerous to both the wielders and their enemies.</em></p>
               </div>
@@ -127,7 +127,7 @@
             </div>
           </div>
           <div class="frame full">
-            <div class="content_frame">
+            <div class="content_frame" style="margin-bottom:0%">
               <div class="frame-title">THE PROVING GROUNDS</div>
               <div class="frame-subtitle">
                 With resources nearing exhaustion in the local galaxy cluster, the four factions have decided to settle their differences in a free-for-all on their home planet – planet Earth, right at the very facility that tore humanity apart...
@@ -135,10 +135,12 @@
               <div class="flex" style="height:50vh">
                 <div style="width:50%;height:auto" class="subframe">
                   <div class="frame-subtitle">
-                  Singapore University of Technology and Design
-                  <br>8 Somapah Road
-                  <br>Singapore 487372
-                  <br><br>16th May 2019
+                    <span class="contact-info">
+                      Singapore University of Technology and Design
+                      <br>8 Somapah Road
+                      <br>Singapore 487372
+                      <br><br>16th May 2019
+                    </span>
                   </div>
                 </div>
                 <div style="width:50%;height:100%" class="subframe" id="maps" data-aos="fade-left">
