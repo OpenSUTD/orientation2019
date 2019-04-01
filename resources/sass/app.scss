@@ -1,22 +1,38 @@
+$screen-sm-min: 768px;
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
 @font-face {
     font-family: phage;
     src: url("../fonts/phage_regular.otf");
 }
 
+.frame:nth-child(1) .subframe {
+    width: 50%;
+    @include sm {
+        width: auto;
+    }
+}
+
 #logo {
-    height: 50vh;
-    position: absolute;
+    height: 50vmin;
+    // position: absolute;
     top: 0;
     left: 0;
-    transform: translate(10%,-50%);
+    // transform: translate(10%,-50%);
+    @include sm {
+        //display: none;
+    }
 }
 
 .globeParent {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(10%,-50%);
-    width: 65%;
+    // transform: translate(10%,-50%);
+    width: 50vmin;
     height: auto;
 }
 
@@ -27,20 +43,20 @@
 }
 
 .title {
-    font-size: 9vw;
+    font-size: 9vmax;
     font-family: calculator;
     text-align: center;
 }
 
 .frame-title {
-    font-size: 9vw;
+    font-size: 9vmax;
     text-align: center;
     font-family: calculator;
 }
 
 .subtitle {
     margin-top: 5%;
-    font-size: 2vw;
+    font-size: 2vmax;
     letter-spacing: 0.5px;
     text-align: justify;
     font-family: "Andale Mono", "Consolas", "Courier New";
@@ -48,18 +64,15 @@
 }
 
 .frame-subtitle {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 2%;
-    margin-right: 2%;
-    font-size: 2vw;
+    margin: 5% 2%;
+    font-size: 2vmax;
     letter-spacing: 0.5px;
     text-align: justify;
     font-family: "Andale Mono", "Consolas", "Courier New";
 }
 
 .frame-largetext {
-    font-size: 2vw;
+    font-size: 2vmax;
     letter-spacing: 0.5px;
     text-align: justify;
     font-family: "Andale Mono", "Consolas", "Courier New";
@@ -67,12 +80,15 @@
 
 #logosection {
     position: relative;
+    @include sm{
+      margin: 2%;
+    }
 }
 
 #logosection * {}
 
 #main_description {
-    font-size: 1.6vw;
+    font-size: 1.6vmax;
     font-family: Tahoma;
     margin: 5%;
 }
@@ -93,8 +109,14 @@
 
 .flex {
     display: flex;
+    @include sm {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        
+    }
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
 .full {
@@ -122,7 +144,7 @@
 .backgrounds img {
     position: absolute;
     z-index: -9001;
-    min-width: 100vw;
+    min-width: 100vmax;
     top: 0;
     left: 0;
 }
@@ -147,7 +169,7 @@
     margin: 5% 1%;
 }
 
-.contact-info{
+.contact-info {
     letter-spacing: 0.5px;
     justify-content: center;
     text-align: left !important;

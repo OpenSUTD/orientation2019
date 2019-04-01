@@ -42,7 +42,7 @@
       <content class="loading">
         <div class="frames">
           <div class="frame flex full">
-            <div style="width:50%;" class="subframe">
+            <div style="" class="subframe">
               <div class="title">
                 <span> OLETHROS </span>
               </div>
@@ -50,10 +50,10 @@
                 <span>SUTD Orientation Camp 2019</span>
               </div>
             </div>
-            <div style="width:50%;" class="subframe">
+            <div style="" class="subframe">
               <div id="logosection">
-                <span class="globeParent">@include("globe")</span>
                 <img id="logo" src="{{asset('img/olethros.png')}}">
+                <span class="globeParent">@include("globe")</span>
               </div>
             </div>
           </div>

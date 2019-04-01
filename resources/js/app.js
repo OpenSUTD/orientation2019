@@ -17,7 +17,8 @@ window.anime = anime;
 // import ScrollMagic from "scrollmagic";
 
 window.start = function() {
-    console.log("hello world!")
+    console.log("hello world!");
+    var isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
     let $ = window.$;
     window.aos.init();
     $("content").removeClass("loading");
@@ -48,10 +49,11 @@ window.start = function() {
         duration: 2500,
     }).add({
         targets: "#logosection",
-        translateX: [-100, 0],
+        translateX: (!isMobile ? [-100, 0] : [0, 0]),
         easing: "easeOutExpo",
         duration: 1500,
         complete: function(anim) {
+            console.log(isMobile);
             tl2.play();
             redrawGlobe();
         }
@@ -74,7 +76,7 @@ window.start = function() {
         easing: "linear",
         rotate: "+=360",
         duration: 25000,
-        loop: true,
+        //loop: true,
         autoplay: false
     });
     var redrawGlobe = function() {
