@@ -76,7 +76,7 @@ window.start = function() {
         easing: "linear",
         rotate: "+=360",
         duration: 25000,
-        //loop: true,
+        loop: true,
         autoplay: false
     });
     var redrawGlobe = function() {
