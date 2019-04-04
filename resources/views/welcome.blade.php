@@ -82,15 +82,19 @@
               </div>
             </div>
             <div class="content_frame house_frame" data-aos="fade-right">
-                <div class="house_name_frame">
-                  <div class="house_names" style="color:#ffd100" data-aos="fade-up">NOVA</div>
-                  <div class="house_nicknames" data-aos="fade-up">the scavengers</div>
-                </div>
-                <div class="house_logo_frame">
-                  <img src="{{asset('img/nova.svg')}}" class="house_logo" data-aos="fade-right">
-                  <p class="house_logo_lore"><em>The gunblade, forgable from any abundant metal in the universe.</em></p>
-                </div>
-                <div class="house_lore">They are the material gatherers. In the days leading up to the breakthrough technology developed by PANV, the team of engineers under the current leader of Nova (one of the directors in PANV) managed to develop and rapidly advance the state of cybernetics, using the limited resources left on Earth. Post falling out, Nova became known infamously as the ‘salvagers’, as they could turn even scraps into useful materials to be used for their faction expansion.</div>
+              <div class="house_name_frame">
+                <div class="house_names" style="color:#ffd100" data-aos="fade-up">NOVA</div>
+                <div class="house_nicknames" data-aos="fade-up">the scavengers</div>
+              </div>
+              <div class="house_logo_frame">
+                <img src="{{asset('img/nova.svg')}}" class="house_logo" data-aos="fade-right">
+                <p class="house_logo_lore"><em>The gunblade, forgable from any abundant metal in the universe.</em></p>
+              </div>
+              <div class="house_lore">
+                <p>They are the material gatherers.</p>
+                <p>In the days leading up to the breakthrough technology developed by PANV, the team of engineers under the current leader of Nova (one of the directors in PANV) managed to develop and rapidly advance the state of cybernetics, using the limited resources left on Earth.</p>
+                <p>Post falling out, Nova became known infamously as the ‘salvagers’, as they could turn even scraps into useful materials to be used for their faction expansion.</p>
+              </div>
             </div>
             <div class="content_frame house_frame" data-aos="fade-right">
               <div class="house_name_frame">
@@ -101,7 +105,11 @@
                 <img src="{{asset('img/vela.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_logo_lore"><em>The compound bow, with a range further than what one would expect.</em></p>
               </div>
-              <div class="house_lore">They are the visionaries. While their technical skills are not subpar, their interpersonal skills are formidable. They are the ones who first saw the dire need for new forms of technology in pharmaceutics, and actively gathered the top minds to develop what became the breakthrough technology. The leader of Vela was always thought to be able to read the minds of others, initiating plans and seizing opportunities even before others have reacted. Post falling out, Vela is known to be the ‘initiators’, actively sourcing out new resource-rich planets before other factions.</div>
+              <div class="house_lore">
+                <p>They are the visionaries.</p>
+                <p>While their technical skills are not subpar, their interpersonal skills are formidable. They are the ones who first saw the dire need for new forms of technology in pharmaceutics, and actively gathered the top minds to develop what became the breakthrough technology. The leader of Vela was always thought to be able to read the minds of others, initiating plans and seizing opportunities even before others have reacted.</p>
+                <p>Post falling out, Vela is known to be the ‘initiators’, actively sourcing out new resource-rich planets before other factions.</p>
+              </div>
             </div>
             <div class="content_frame house_frame" data-aos="fade-right">
               <div class="house_name_frame">
@@ -112,7 +120,11 @@
                 <img src="{{asset('img/pyxis.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_logo_lore"><em>The naginata, boasting a large angle of attack protecting its users from ambush</em></p>
               </div>
-                <div class="house_lore">They are the analysts. Much of the success of the breakthrough technology should be attributed to those in Pyxis, who performed countless rounds of experiments and collected vast libraries of data for analysis. In the early stages of development, the leader (past director) of Pyxis was known to be extremely meticulous, hence creating new forms of data analytics in order to ensure a reliable report of effectiveness rate among potential users. Post falling out, Pyxis is often called to be ‘the hawk’, being able to analyse everything down to the smallest detail that nothing escapes them. </div>
+              <div class="house_lore">
+                <p>They are the analysts.</p>
+                <p>Much of the success of the breakthrough technology should be attributed to those in Pyxis, who performed countless rounds of experiments and collected vast libraries of data for analysis. In the early stages of development, the leader (past director) of Pyxis was known to be extremely meticulous, hence creating new forms of data analytics in order to ensure a reliable report of effectiveness rate among potential users.</p>
+                <p>Post falling out, Pyxis is often called to be ‘the hawk’, being able to analyse everything down to the smallest detail that nothing escapes them.</p>
+              </div>
             </div>
             <div class="content_frame house_frame" data-aos="fade-right">
               <div class="house_name_frame">
@@ -123,7 +135,11 @@
                 <img src="{{asset('img/auryx.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_logo_lore"><em>The mystic staff, dangerous to both the wielders and their enemies.</em></p>
               </div>
-              <div class="house_lore">They are the experimenters. The very idea of the breakthrough technology should be credited to Auryx, who combines both creativity and scientific knowledge to design technology that has never been seen before, yet could be the panacea to all problems faced by humans then. The leader of Auryx gives little care to constricting limitations, opting to be open minded to all forms of possibilities that one thing can be utilised. Auryx in post falling out is referred to as the mystic, developing technologies and weapons never seen before, making it hard for all the other faction to come up with a counterplan.</div>
+              <div class="house_lore">
+                <p>They are the experimenters.</p>
+                <p>The very idea of the breakthrough technology should be credited to Auryx, who combine both creativity and scientific knowledge to design technology never been seen before, yet could be the panacea to all problems humans face. Auryx cares little about limitations, opting to be open minded to all possibilities that one thing can be utilised.</p>
+                <p>Auryx post falling out is known as the mystic, developing fresh technologies and weapons, making it hard for all the other faction to come up with a counterplan.</p>
+              </div>
             </div>
           </div>
           <div class="frame">
