@@ -69,11 +69,15 @@
               </div>
               <div class="frame-subtitle" style="margin-top:5%">
                 Olethros is set in a time of inter-galactic exploration, featuring 4 factions at war for rapidly depleting resources left in the local galaxy. Compete with your fellow faction comrades against others in exciting challenges to emerge as the last faction standing. Beware, there may be external dangers infiltrating the faction ranks, determined to destroy every human completely... May the strongest faction prevail in the age of resource scarcity.
-                <div style="font-size:1.5em;margin-top:5%">Audio Teaser</div>
-                <audio controls>
-                  <source src="{{asset('embeds/teaser.mp3')}}" type="audio/mpeg">
-                Your browser does not support the audio element.
-                </audio>
+              </div>
+              <div>
+                <div style="font-size:1.5em;margin-top:5%;text-align:center" class="frame-subtitle">
+                  Audio Teaser
+                  <audio controls>
+                    <source src="{{asset('embeds/teaser.mp3')}}" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                </div>
               </div>
             </div>
           </div>
