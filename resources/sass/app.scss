@@ -25,7 +25,7 @@ $max_font: 24px;
         & {
             font-size: $min-font-size;
             @media screen and (min-width: $min-vw) {
-                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}) * #{scale});
+                font-size: calc((#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * #{$scale});
             }
             @media screen and (min-width: $max-vw) {
                 font-size: $max-font-size;
@@ -78,10 +78,7 @@ $max_font: 24px;
 }
 
 .frame-title {
-    font-size: 9vmax;
-    @include sm {
-        font-size: 18vmax;
-    }
+    @include fluid-type($min_width, $max_width, $min_font, $max_font, 4);
     text-align: center;
     font-family: calculator;
 }
@@ -97,9 +94,8 @@ $max_font: 24px;
 
 .frame-subtitle {
     margin: 5% 2%;
-    font-size: 2vmax;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font, 1);
     @include sm {
-        font-size: 3.3vmax;
         letter-spacing: unset;
     }
     letter-spacing: 0.5px;
@@ -286,6 +282,7 @@ $max_font: 24px;
 
 .backgrounds img {
     position: absolute;
+    overflow-x: hidden;
     z-index: -9001;
     min-width: 100vmax;
     top: 0;
@@ -293,6 +290,13 @@ $max_font: 24px;
 }
 
 .contact-info {
+    @include md {
+        width: 50%;
+        display: inline-block;
+    }
+    @include sm {
+        width: 100%;
+    }
     letter-spacing: 0.5px;
     justify-content: center;
     text-align: left !important;
@@ -302,13 +306,22 @@ $max_font: 24px;
     margin: 5% 1%;
 }
 
-#maps iframe {
-    width: 100%;
-    height: 100%;
+#maps {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
 }
 
-body,
-html {
+#maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+body {
     margin: 0;
     width: 100%;
     height: auto;
@@ -318,4 +331,5 @@ html {
 content {
     width: 100%;
     height: auto;
+    overflow-y: auto;
 }

@@ -62,7 +62,7 @@
               <div class="subframe" style="width:100%">
                 <div class="frame-title" style="clear:both">STORY</div>
               </div>
-              <div class="frame-largetext" style="margin-top:5%">
+              <div class="frame-subtitle" style="margin-top:5%">
                 Olethros is set in a time of inter-galactic exploration, featuring 4 factions at war for rapidly depleting resources left in the local galaxy. Compete with your fellow faction comrades against others in exciting challenges to emerge as the last faction standing. Beware, there may be external dangers infiltrating the faction ranks, determined to destroy every human completely... May the strongest faction prevail in the age of resource scarcity.
                 <div style="font-size:1.5em;margin-top:5%">Audio Teaser</div>
                 <audio controls>
@@ -126,28 +126,22 @@
               <div class="house_lore">They are the experimenters. The very idea of the breakthrough technology should be credited to Auryx, who combines both creativity and scientific knowledge to design technology that has never been seen before, yet could be the panacea to all problems faced by humans then. The leader of Auryx gives little care to constricting limitations, opting to be open minded to all forms of possibilities that one thing can be utilised. Auryx in post falling out is referred to as the mystic, developing technologies and weapons never seen before, making it hard for all the other faction to come up with a counterplan.</div>
             </div>
           </div>
-          <div class="frame full">
+          <div class="frame">
             <div class="content_frame" style="margin-bottom:0%">
               <div class="frame-title">THE PROVING GROUNDS</div>
               <div class="frame-subtitle">
                 With resources nearing exhaustion in the local galaxy cluster, the four factions have decided to settle their differences in a free-for-all on their home planet – planet Earth, right at the very facility that tore humanity apart...
               </div>
-              <div class="flex" style="height:50vh">
-                <div style="width:50%;height:auto" class="subframe">
-                  <div class="frame-subtitle">
-                    <span class="contact-info">
-                      Singapore University of Technology and Design
-                      <br>8 Somapah Road
-                      <br>Singapore 487372
-                      <br><br>16th May 2019
-                    </span>
-                  </div>
-                </div>
-                <div style="width:50%;height:100%" class="subframe" id="maps" data-aos="fade-left">
-                  <iframe frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key={{env('GMAPS_API_KEY')}}&q=SUTD" allowfullscreen>
-                  </iframe>
-                </div>
+              <div class="contact-info">
+                Singapore University of Technology and Design
+                <br>8 Somapah Road
+                <br>Singapore 487372
+                <br><br>16th May 2019
+              </div>
+              <div id="maps" data-aos="fade-left">
+                <iframe frameborder="0" style="border:0"
+                  src="https://www.google.com/maps/embed/v1/place?key={{env('GMAPS_API_KEY')}}&q=SUTD" allowfullscreen>
+                </iframe>
               </div>
             </div>
           </div>
