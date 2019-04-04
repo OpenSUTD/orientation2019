@@ -78,7 +78,12 @@ $max_font: 24px;
 }
 
 .frame-title {
-    @include fluid-type($min_width, $max_width, $min_font, $max_font, 4);
+    @include md {
+        font-size: 9vmax;
+    }
+    @include sm {
+        @include fluid-type($min_width, $max_width, $min_font, $max_font, 4);
+    }
     text-align: center;
     font-family: calculator;
 }
@@ -287,6 +292,7 @@ $max_font: 24px;
     min-width: 100vmax;
     top: 0;
     left: 0;
+    transform: translate(-10%,-10%); //starting position
 }
 
 .contact-info {

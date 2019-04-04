@@ -137,7 +137,7 @@ window.start = function() {
         let img = $(".backgrounds img")
         let x = (e.screenX / window.innerWidth) - 0.5;
         let y = (e.screenY / window.innerHeight) - 0.5;
-        img.first().css("transform", "translate(" + x * 10 + "%," + y * 10 + "%)");
+        img.first().css("transform", "translate(" + ((-10) + (x * 2.5)).toString() + "%," + ((-10) + (y * 2.5)).toString() + "%)");
     });
     delete window.start;
 }
