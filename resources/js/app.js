@@ -131,11 +131,13 @@ window.start = function() {
         setTimeout(blur, 200);
     });
     document.body.addEventListener("mousemove", function(e) {
-        let x = (e.screenX / window.innerWidth) - 1;
-        let y = (e.screenY / window.innerHeight) - 1;
-        let xShift = 50 * x;
-        let yShift = 50 * y;
-        $(".backgrounds img").first().css("transform", "translate(" + xShift + "px," + yShift + "px)");
+        if ('ontouchstart' in window || navigator.msMaxTouchPoints) {
+            return; //dont do this if this is a touchscreen
+        }
+        let img = $(".backgrounds img")
+        let x = (e.screenX / window.innerWidth) - 0.5;
+        let y = (e.screenY / window.innerHeight) - 0.5;
+        img.first().css("transform", "translate(" + x * 10 + "%," + y * 10 + "%)");
     });
     delete window.start;
 }
