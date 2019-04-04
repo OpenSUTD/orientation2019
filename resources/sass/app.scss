@@ -58,6 +58,7 @@ $max_font: 24px;
 
 .globeParent {
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     // transform: translate(10%,-50%);
