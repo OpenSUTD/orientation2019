@@ -13,10 +13,7 @@
         <meta property="og:site_name" content="OLETHROS"/>
         <meta property="org:url" content="{{url('/')}}"/>
         <link href="{{asset('css/preloader.css')}}" rel="stylesheet"/>
-        <link href="{{asset('css/app.css')}}" rel="stylesheet" defer/>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" defer>
         <script src="{{asset('js/preloader.js')}}"></script>
-        <script defer src="{{asset('js/app.js')}}"></script>
     </head>
     <body>
       @if(env("APP_ENV") == "staging")
@@ -60,7 +57,7 @@
             </div>
             <div style="" class="subframe">
               <div id="logosection">
-                <img id="logo" src="{{asset('img/olethros.png')}}">
+                <img defer id="logo" src="{{asset('img/olethros.png')}}">
                 <span class="globeParent">@include("globe")</span>
               </div>
             </div>
@@ -95,7 +92,7 @@
                 <div class="house_nicknames" data-aos="fade-up">the scavengers</div>
               </div>
               <div class="house_logo_frame">
-                <img src="{{asset('img/nova.svg')}}" class="house_logo" data-aos="fade-right">
+                <img defer src="{{asset('img/nova.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_logo_lore"><em>The gunblade, forgable from any abundant metal in the universe.</em></p>
               </div>
               <div class="house_lore">
@@ -110,7 +107,7 @@
                 <div class="house_nicknames" data-aos="fade-up">the visionaries</div>
               </div>
               <div class="house_logo_frame">
-                <img src="{{asset('img/vela.svg')}}" class="house_logo" data-aos="fade-right">
+                <img defer src="{{asset('img/vela.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_logo_lore"><em>The compound bow, with a range further than what one would expect.</em></p>
               </div>
               <div class="house_lore">
@@ -125,7 +122,7 @@
                 <div class="house_nicknames" data-aos="fade-up">the analysts</div>
               </div>
               <div class="house_logo_frame">
-                <img src="{{asset('img/pyxis.svg')}}" class="house_logo" data-aos="fade-right">
+                <img defer src="{{asset('img/pyxis.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_logo_lore"><em>The naginata, boasting a large angle of attack protecting its users from ambush</em></p>
               </div>
               <div class="house_lore">
@@ -140,7 +137,7 @@
                 <div class="house_nicknames" data-aos="fade-up">the experimenters</div>
               </div>
               <div class="house_logo_frame">
-                <img src="{{asset('img/auryx.svg')}}" class="house_logo" data-aos="fade-right">
+                <img defer src="{{asset('img/auryx.svg')}}" class="house_logo" data-aos="fade-right">
                 <p class="house_logo_lore"><em>The mystic staff, dangerous to both the wielders and their enemies.</em></p>
               </div>
               <div class="house_lore">
@@ -171,8 +168,12 @@
           </div>
         </div>
         <div class="backgrounds">
-          <img src="{{asset('img/frame_1.jpg')}}">
+          <img defer src="{{asset('img/frame_1.jpg')}}">
         </div>
       </content>
+      
+      <script defer async src="{{asset('js/app.js')}}"></script>
+      <link href="{{asset('css/app.css')}}" rel="stylesheet" defer async/>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" defer async>
     </body>
 </html>
