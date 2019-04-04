@@ -1,3 +1,14 @@
+$screen-sm-min: 768px;
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+@mixin md {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
 @font-face {
     font-family: calculator;
     src: url("../fonts/calculator.ttf");
@@ -65,6 +76,10 @@ loader .loaderRing {
     top: 50%;
     left: 50%;
     filter: drop-shadow(0px 0px 12px rgb(255, 0, 0));
+    @include md {
+        width: 35vw;
+        height: auto;
+    }
 }
 
 loader .loaderRing .loaderRingCircle {
@@ -135,7 +150,6 @@ loader {
     top: 50%;
     left: 50%;
 }
-
 
 content.loading {
     visibility: hidden;

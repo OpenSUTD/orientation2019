@@ -36,7 +36,7 @@
           <span class="loading"></span>
           <span class="loading"></span>
         </h1>
-        <svg class="loaderRing" viewBox="0 0 100 100">
+        <svg class="loaderRing" viewBox="0 0 30 30">
           <circle
             class="loaderRingCircle"
             stroke="white"
