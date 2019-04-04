@@ -211,8 +211,8 @@ $max_font: 24px;
         max-width: 35vw;
     }
     @include sm {
-        height: 50vh;
-        width: auto;
+        max-width: 70vw;
+        height: auto;
     }
 }
 
