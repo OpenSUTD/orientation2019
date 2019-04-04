@@ -171,7 +171,7 @@
           </div>
         </div>
         <div class="backgrounds">
-          <img src="https://www.iliketowastemytime.com/sites/default/files/outer-space-hd-wallpaper.jpg">
+          <img src="{{asset('img/frame_1.jpg')}}">
         </div>
       </content>
     </body>
