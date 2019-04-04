@@ -313,6 +313,7 @@ $max_font: 24px;
 }
 
 #maps iframe {
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;

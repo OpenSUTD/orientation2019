@@ -142,7 +142,7 @@
               </div>
             </div>
           </div>
-          <div class="frame">
+          <div class="frame" style="overflow:hidden">
             <div class="content_frame" style="margin-bottom:0%">
               <div class="frame-title">THE PROVING GROUNDS</div>
               <div class="frame-subtitle">
