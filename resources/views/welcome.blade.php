@@ -4,6 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>OLETHROS</title>
+        <meta name="description" content="SUTD Orientation 2019 – Coming 16th May 2019">
+        <link rel="shortcut icon" type="image/png" href="{{asset('img/olethros.png')}}"/>
+        <meta property="og:title" content="OLETHROS"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="SUTD Orientation 2019 – Coming 16th May 2019"/>
+        <meta property="og:image" content="{{asset('img/preview_logo.png')}}"/>
+        <meta property="og:site_name" content="OLETHROS"/>
+        <meta property="org:url" content="{{url('/')}}"/>
         <link href="{{asset('css/preloader.css')}}" rel="stylesheet"/>
         <link href="{{asset('css/app.css')}}" rel="stylesheet" defer/>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" defer>
