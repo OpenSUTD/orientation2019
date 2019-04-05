@@ -1,69 +1,104 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# OLETHROS – SUTD Orientation 2019
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## About this repository
 
-## About Laravel
+This repository houses both the front-end product of the Orientation Website (front-facing landing page), and the backend that handles queries to/from the Telegram Bot server for the Orientation Bot.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+This project is built on the [Laravel PHP framework](https://laravel.com/) and self-hosted on a LAMP stack.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Getting around this repository
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+I published this repository on openSUTD in hope that someone else would be able to study this and gain insights. Here are some starting points depending on what you're interested in.
 
-## Learning Laravel
+### Frontend (website)
+If you're only interested in studying the HTML/CSS/JS of the landing page, look at the following files and folders:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+- `resources/views/welcome.blade.php` – ignore the .blade.php extension and anything in the file that doesn't look like HTML.
+- `resources/sass` – for the CSS assets. I used the [SASS CSS preprocessor](https://sass-lang.com/).
+- `resources/js` – for the JS assets.  Dependencies managed with [npm](https://www.npmjs.com/) and compiled with webpack (laravel gulp).
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+### Backend (telegram bot)
+Coming soon.
 
-## Laravel Sponsors
+## Settings up your own copy
+You need to set up a stack that is capable of meeting [Laravel's requirements](https://laravel.com/docs/5.7/installation). I used a monolithic LAMP stack on [Google Cloud Compute](https://cloud.google.com/compute/) but you are free to do whatever you want as long as it works.
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+Clone this repository into your server directory:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
+```bash
+git clone opensutd/orientation2019
+```
 
-## Contributing
+As with all Laravel setups, you need to point your web server's DocumentRoot into the `public` subfolder, *not* the root of the project.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Install PHP dependencies with composer:
 
-## Security Vulnerabilities
+```bash
+composer install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Install JS dependencies with npm:
 
-## License
+```bash
+npm install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Setup environment variables: Create a new file `.env` by copying `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Then, with your text editor, you need to populate these variables inside your newly created environment file:
+
+- `APP_URL` – URL of where your project is hosted
+- `TELEGRAM_BOT_TOKEN` – your Telegram API's bot token
+- `TELEGRAM_ENDPOINT_SECRET` – a random string, this is the path where you will instruct the [Telegram Bot API](https://core.telegram.org/bots/api) to send webhook updates to.
+- `GMAPS_API_KEY` – API Key obtained from [Google Cloud Platform Maps Embed API](https://developers.google.com/maps/documentation/embed/start), in order to display the embedded maps in the homepage correctly.
+- `DB_*` – Database connection details.
+The other variables can be ignored.
+
+Laravel setups: perform migrations and database and generate encryption keys:
+```bash
+php artisan migrate
+php artisan key:generate
+```
+
+Finally, compile frontend assets: (replace `dev` with `prod` if you want to minify and stuff)
+```bash
+npm run dev
+```
+
+If laravel complains about "unable to open stream" in logs, you need to `chown` and `chmod` your `storage/logs` directory and give your web server account the correct permissions.
+
+In addition, for your telegram bot to receive the webhook updates correctly, you need to tell the Telegram Bot API that the location of the webhook is at `https://<yourdomain>.com/telegram/<TELEGRAM_ENDPOINT_SECRET>`. Example [here](https://medium.com/@xabaras/setting-your-telegram-bot-webhook-the-easy-way-c7577b2d6f72).
+
+## Frequently asked questions
+
+### Who made this?
+See Credits section below.
+
+### Why PHP?
+~~Because I don't know how to do it in Python~~ Because I don't want to perpetuate the current mindset in SUTD that Python is the magical cure-all for every single problem and application. And also the Laravel ORM is lit af.
+
+### But PHP sucks-
+Ok.
+
+### Can I use this as a base for my own orientation/activity/project?
+Yes, as long as you practise common sense and follow the License.
+
+## Credits
+- Orientation 2019 Committee – general event organisation
+  - Jeslyn Ng, Class of 2021
+  - Evan Sidhi, Class of 2021
+  - Philia Neo, Class of 2021
+  - ... some others I never seen
+- Orientation 2019 Creative Subcommittee - house conceptualisation and logo designs
+  - Diane Lee, Class of 2021
+  - Sesila Fenina Gunawan, Class of 2021
+  - Hazel , Class of 2021
+  - Yu Bing, Class of 2021
+  - ... some others who didn't give their names to me
+- Dev Team - tank the software side
+  - [Chester Koh](https://github.com/chesnutcase), Class of 2021
+  - ... damn it's lonely in here
