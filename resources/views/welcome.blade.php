@@ -137,7 +137,7 @@
             </div>
             <div class="content_frame house_frame" data-aos="fade-right">
               <div class="house_name_frame">
-                <div class="house_names" style="color:#fdc173" data-aos="fade-up">AURYX</div>
+                <div class="house_names" style="color:#f68639" data-aos="fade-up">AURYX</div>
                 <div class="house_nicknames" data-aos="fade-up">the experimenters</div>
               </div>
               <div class="house_logo_frame">
