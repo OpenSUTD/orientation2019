@@ -13,9 +13,9 @@ $screen-sm-min: 768px;
     @return $value / ($value * 0 + 1);
 }
 $min_width: 320px;
-$max_width: 1200px;
+$max_width: 3840px;
 $min_font: 16px;
-$max_font: 24px;
+$max_font: 40px;
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size, $scale:1.0) {
     $u1: unit($min-vw);
     $u2: unit($max-vw);
