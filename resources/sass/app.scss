@@ -291,7 +291,7 @@ $max_font: 24px;
     position: absolute;
     overflow-x: hidden;
     z-index: -9001;
-    min-width: 100vmax;
+    min-width: calc(100vmax * 1.2);
     top: 0;
     left: 0;
     transform: translate(-10%,-10%); //starting position
