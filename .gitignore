@@ -13,3 +13,4 @@ yarn-error.log
 /public/adminer.php
 public/css
 public/js
+.editorconfig
