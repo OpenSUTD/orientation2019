@@ -92,8 +92,8 @@
             </div>
             <div class="content_frame house_frame" data-aos="fade-right">
               <div class="house_name_frame">
-                <div class="house_names" style="color:#ffd100" data-aos="fade-up">NOVA</div>
-                <div class="house_nicknames" data-aos="fade-up">the scavengers</div>
+                <div class="house_names nova" data-aos="fade-up">NOVA</div>
+                <div class="house_nicknames nova" data-aos="fade-up">the scavengers</div>
               </div>
               <div class="house_logo_frame">
                 <img defer src="{{asset('img/nova.svg')}}" class="house_logo" data-aos="fade-right">
@@ -107,8 +107,8 @@
             </div>
             <div class="content_frame house_frame" data-aos="fade-right">
               <div class="house_name_frame">
-                <div class="house_names" style="color:#6fcfeb" data-aos="fade-up">VELA</div>
-                <div class="house_nicknames" data-aos="fade-up">the visionaries</div>
+                <div class="house_names vela" data-aos="fade-up">VELA</div>
+                <div class="house_nicknames vela" data-aos="fade-up">the visionaries</div>
               </div>
               <div class="house_logo_frame">
                 <img defer src="{{asset('img/vela.svg')}}" class="house_logo" data-aos="fade-right">
@@ -122,8 +122,8 @@
             </div>
             <div class="content_frame house_frame" data-aos="fade-right">
               <div class="house_name_frame">
-                <div class="house_names" style="color:#b6b8dd" data-aos="fade-up">PYXIS</div>
-                <div class="house_nicknames" data-aos="fade-up">the analysts</div>
+                <div class="house_names pyxis" data-aos="fade-up">PYXIS</div>
+                <div class="house_nicknames pyxis" data-aos="fade-up" style="text-stroke:0.05em #b6b8dd">the analysts</div>
               </div>
               <div class="house_logo_frame">
                 <img defer src="{{asset('img/pyxis.svg')}}" class="house_logo" data-aos="fade-right">
@@ -137,8 +137,8 @@
             </div>
             <div class="content_frame house_frame" data-aos="fade-right">
               <div class="house_name_frame">
-                <div class="house_names" style="color:#f68639" data-aos="fade-up">AURYX</div>
-                <div class="house_nicknames" data-aos="fade-up">the experimenters</div>
+                <div class="house_names auryx"data-aos="fade-up">AURYX</div>
+                <div class="house_nicknames auryx" data-aos="fade-up">the experimenters</div>
               </div>
               <div class="house_logo_frame">
                 <img defer src="{{asset('img/auryx.svg')}}" class="house_logo" data-aos="fade-right">

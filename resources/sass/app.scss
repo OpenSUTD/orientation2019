@@ -38,12 +38,17 @@ $max_font: 40px;
     font-display: swap;
     src: url("../fonts/phage_regular.otf");
 }
+@import "~sass-text-stroke/_text-stroke";
 
 .frame:nth-child(1) .subframe {
     @include sm {
         width: auto;
     }
 }
+$nova: #ffd100;
+$vela: #6fcfeb;
+$pyxis: #b6b8dd;
+$auryx: #f68639;
 
 #logo {
     height: 50vmin;
@@ -255,6 +260,22 @@ $max_font: 40px;
     }
 }
 
+.house_names.nova {
+    color: $nova;
+}
+
+.house_names.vela {
+    color: $vela;
+}
+
+.house_names.pyxis {
+    color: $pyxis;
+}
+
+.house_names.auryx {
+    color: $auryx;
+}
+
 .house_nicknames {
     font-family: phage;
     font-size: 2.5em;
@@ -262,6 +283,22 @@ $max_font: 40px;
     @include md {
         display: inline;
     }
+}
+
+.house_nicknames.nova {
+    @include text-stroke(2, $nova);
+}
+
+.house_nicknames.vela {
+    @include text-stroke(2, $vela);
+}
+
+.house_nicknames.pyxis {
+    @include text-stroke(2, $pyxis);
+}
+
+.house_nicknames.auryx {
+    @include text-stroke(2, $auryx);
 }
 
 .house_lore {

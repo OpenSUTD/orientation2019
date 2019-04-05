@@ -25,7 +25,8 @@
     },
     "dependencies": {
         "animejs": "^3.0",
-        "scrollmagic": "^2.0.6",
-        "aos": "^2.3.1"
+        "aos": "^2.3.1",
+        "sass-text-stroke": "^1.0.1",
+        "scrollmagic": "^2.0.6"
     }
 }
