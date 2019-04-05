@@ -28,7 +28,7 @@ You need to set up a stack that is capable of meeting [Laravel's requirements](h
 Clone this repository into your server directory:
 
 ```bash
-git clone opensutd/orientation2019
+git clone https://github.com/OpenSUTD/orientation2019.git
 ```
 
 As with all Laravel setups, you need to point your web server's DocumentRoot into the `public` subfolder, *not* the root of the project.
