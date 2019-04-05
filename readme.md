@@ -1,5 +1,7 @@
 # OLETHROS – SUTD Orientation 2019
 
+![Olethros](https://raw.githubusercontent.com/OpenSUTD/orientation2019/master/resources/img/preview_logo.png)
+
 ## About this repository
 
 This repository houses both the front-end product of the Orientation Website (front-facing landing page), and the backend that handles queries to/from the Telegram Bot server for the Orientation Bot.
@@ -85,7 +87,7 @@ See Credits section below.
 Ok.
 
 ### Can I use this as a base for my own orientation/activity/project?
-Yes, as long as you practise common sense and follow the License.
+Yes, as long as you practise common sense and follow the [License](https://github.com/OpenSUTD/orientation2019/blob/master/license.md).
 
 ## Credits
 - Orientation 2019 Committee – general event organisation
