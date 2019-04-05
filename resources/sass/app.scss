@@ -28,7 +28,7 @@ $max_font: 40px;
                 font-size: calc((#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * #{$scale});
             }
             @media screen and (min-width: $max-vw) {
-                font-size: $max-font-size;
+                font-size: calc(1.5vw * #{$scale});
             }
         }
     }
@@ -223,7 +223,7 @@ $max_font: 40px;
     letter-spacing: 0.5px;
     text-align: center;
     font-family: "Andale Mono", "Consolas", "Courier New", monospace;
-    font-size: 1.5em;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font, 1);
     margin: 5% 1%;
     @include sm {
         font-size: 1em;
