@@ -164,7 +164,7 @@
                 Singapore University of Technology and Design
                 <br>8 Somapah Road
                 <br>Singapore 487372
-                <br><br>16th May 2019
+                <br><br>15th May 2019
               </div>
               <div id="maps" data-aos="fade-left">
                 <iframe frameborder="0" style="border:0"
