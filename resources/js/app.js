@@ -144,7 +144,8 @@ window.start = function() {
     anime.timeline().add({
       targets: $("#cluehint")[0],
       easing: "easeOutExpo",
-      left: ["0", "-50%"],
+      left: ["0", !isMobile ? "-50%" : "0"],
+      top: ["0", isMobile ? "-50%" : 0],
       opacity: [0, 1],
       duration: 1000,
     }).add({
