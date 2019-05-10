@@ -1,49 +1,49 @@
 $screen-sm-min: 768px;
 @mixin sm {
-    @media (max-width: #{$screen-sm-min}) {
-        @content;
-    }
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
 }
 @mixin md {
-    @media (min-width: #{$screen-sm-min}) {
-        @content;
-    }
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
 }
 @function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
+  @return $value / ($value * 0 + 1);
 }
 $min_width: 320px;
 $max_width: 3840px;
 $min_font: 16px;
 $max_font: 40px;
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size, $scale:1.0) {
-    $u1: unit($min-vw);
-    $u2: unit($max-vw);
-    $u3: unit($min-font-size);
-    $u4: unit($max-font-size);
-    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-        & {
-            font-size: $min-font-size;
-            @media screen and (min-width: $min-vw) {
-                font-size: calc((#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * #{$scale});
-            }
-            @media screen and (min-width: $max-vw) {
-                font-size: calc(1.5vw * #{$scale});
-            }
-        }
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc((#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * #{$scale});
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: calc(1.5vw * #{$scale});
+      }
     }
+  }
 }
 @font-face {
-    font-family: phage;
-    font-display: swap;
-    src: url("../fonts/phage_regular.otf");
+  font-family: phage;
+  font-display: swap;
+  src: url("../fonts/phage_regular.otf");
 }
 @import "~sass-text-stroke/_text-stroke";
 
 .frame:nth-child(1) .subframe {
-    @include sm {
-        width: auto;
-    }
+  @include sm {
+    width: auto;
+  }
 }
 $nova: #ffd100;
 $vela: #6fcfeb;
@@ -51,335 +51,352 @@ $pyxis: #b6b8dd;
 $auryx: #f68639;
 
 #logo {
-    height: 50vmin;
-    // position: absolute;
-    top: 0;
-    left: 0;
-    // transform: translate(10%,-50%);
-    @include sm {
-        //display: none;
-    }
+  height: 50vmin;
+  // position: absolute;
+  top: 0;
+  left: 0;
+  // transform: translate(10%,-50%);
+  @include sm {
+    //display: none;
+  }
 }
 
 .globeParent {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    // transform: translate(10%,-50%);
-    width: 50vmin;
-    height: auto;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  // transform: translate(10%,-50%);
+  width: 50vmin;
+  height: auto;
 }
 
 .globe {
-    width: 100%;
-    height: 100%;
-    transform-origin: center center;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
 }
 
 .title {
-    font-size: 9vmax;
-    font-family: calculator;
-    text-align: center;
+  font-size: 9vmax;
+  font-family: calculator;
+  text-align: center;
 }
 
 .frame-title {
-    @include md {
-        font-size: 9vmax;
-    }
-    @include sm {
-        @include fluid-type($min_width, $max_width, $min_font, $max_font, 4);
-    }
-    text-align: center;
-    font-family: calculator;
+  @include md {
+    font-size: 9vmax;
+  }
+  @include sm {
+    @include fluid-type($min_width, $max_width, $min_font, $max_font, 4);
+  }
+  text-align: center;
+  font-family: calculator;
 }
 
 .subtitle {
-    margin-top: 5%;
-    font-size: 2vmax;
-    letter-spacing: 0.5px;
-    text-align: justify;
-    font-family: "Andale Mono", "Consolas", "Courier New", monospace;
-    text-align: center;
+  margin-top: 5%;
+  font-size: 2vmax;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  font-family: "Andale Mono", "Consolas", "Courier New", monospace;
+  text-align: center;
 }
 
 .frame-subtitle {
-    margin: 5% 2%;
-    @include fluid-type($min_width, $max_width, $min_font, $max_font, 1);
-    @include sm {
-        letter-spacing: unset;
-    }
-    letter-spacing: 0.5px;
-    text-align: justify;
-    font-family: "Andale Mono", "Consolas", "Courier New", monospace;
+  margin: 5% 2%;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, 1);
+  @include sm {
+    letter-spacing: unset;
+  }
+  letter-spacing: 0.5px;
+  text-align: justify;
+  font-family: "Andale Mono", "Consolas", "Courier New", monospace;
 }
 
 .frame-largetext {
-    //font-size: 2vmax;
-    @include sm {
-        //font-size: 3.3vmax;
-        letter-spacing: unset;
-    }
-    letter-spacing: 0.5px;
-    text-align: justify;
-    font-family: "Andale Mono", "Consolas", "Courier New", monospace;
+  //font-size: 2vmax;
+  @include sm {
+    //font-size: 3.3vmax;
+    letter-spacing: unset;
+  }
+  letter-spacing: 0.5px;
+  text-align: justify;
+  font-family: "Andale Mono", "Consolas", "Courier New", monospace;
 }
 
 #logosection {
-    position: relative;
-    @include sm {
-        margin: 2%;
-    }
+  position: relative;
+  @include sm {
+    margin: 2%;
+  }
 }
 
 #logosection * {}
 
 #main_description {
-    font-size: 1.6vmax;
-    font-family: Tahoma;
-    margin: 5%;
+  font-size: 1.6vmax;
+  font-family: Tahoma;
+  margin: 5%;
 }
 
 .frame {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .frame > * {
-    margin-left: 2%;
-    margin-right: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .frame:nth-child(4) {
-    background-image: url("/img/frame_2.jpg");
-    background-size: cover;
+  background-image: url("/img/frame_2.jpg");
+  background-size: cover;
 }
 
 .flex {
-    display: flex;
-    @include sm {
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-    }
-    @include sm {
-        justify-content: center;
-    }
-    @include md {
-        justify-content: space-evenly;
-    }
-    align-items: center;
+  display: flex;
+  @include sm {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  @include sm {
+    justify-content: center;
+  }
+  @include md {
+    justify-content: space-evenly;
+  }
+  align-items: center;
 }
 
 .full {
-    height: 100vh;
+  height: 100vh;
 }
 
 .subframe {
-    display: inline-block;
+  display: inline-block;
 }
 
 .content_frame {
-    width: auto;
-    height: 100%;
-    margin: 2% 10%;
-    @include sm {
-        margin: 2% 1%;
-    }
-    // background-color: rgba(0,0,0,0.5);
+  width: auto;
+  height: 100%;
+  margin: 2% 10%;
+  @include sm {
+    margin: 2% 1%;
+  }
+  // background-color: rgba(0,0,0,0.5);
 }
 
 .house_frame {
-    @include md {
-        display: block;
-    }
-    @include sm {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        column-count: unset;
-    }
+  @include md {
+    display: block;
+  }
+  @include sm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-count: unset;
+  }
 }
 
 .house_logo_frame {
-    @include md {
-        display: inline-block;
-        width: 45%;
-    }
-    @include sm {
-        order: 2;
-    }
+  @include md {
+    display: inline-block;
+    width: 45%;
+  }
+  @include sm {
+    order: 2;
+  }
 }
 
 .house_logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @include md {
-        height: 50vh;
-        max-width: 35vw;
-    }
-    @include sm {
-        max-width: 70vw;
-        height: auto;
-    }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @include md {
+    height: 50vh;
+    max-width: 35vw;
+  }
+  @include sm {
+    max-width: 70vw;
+    height: auto;
+  }
 }
 
 .house_logo_lore {
-    letter-spacing: 0.5px;
-    text-align: center;
-    font-family: "Andale Mono", "Consolas", "Courier New", monospace;
-    @include fluid-type($min_width, $max_width, $min_font, $max_font, 1);
-    margin: 5% 1%;
-    @include sm {
-        font-size: 1em;
-    }
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-family: "Andale Mono", "Consolas", "Courier New", monospace;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, 1);
+  margin: 5% 1%;
+  @include sm {
+    font-size: 1em;
+  }
 }
 
 .house_name_frame {
-    @include md {
-        display: flex;
-        width: 100%;
-        clear: both;
-        justify-content: space-around;
-        align-items: center;
-    }
-    @include sm {
-        order: 1;
-    }
+  @include md {
+    display: flex;
+    width: 100%;
+    clear: both;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @include sm {
+    order: 1;
+  }
 }
 
 .house_names {
-    font-family: phage;
-    font-size: 6em;
-    text-align: center;
-    @include md {
-        display: inline;
-    }
+  font-family: phage;
+  font-size: 6em;
+  text-align: center;
+  @include md {
+    display: inline;
+  }
 }
 
 .house_names.nova {
-    color: $nova;
+  color: $nova;
 }
 
 .house_names.vela {
-    color: $vela;
+  color: $vela;
 }
 
 .house_names.pyxis {
-    color: $pyxis;
+  color: $pyxis;
 }
 
 .house_names.auryx {
-    color: $auryx;
+  color: $auryx;
 }
 
 .house_nicknames {
-    font-family: phage;
-    font-size: 2.5em;
-    text-align: center;
-    @include md {
-        display: inline;
-    }
+  font-family: phage;
+  font-size: 2.5em;
+  text-align: center;
+  @include md {
+    display: inline;
+  }
 }
 
 .house_nicknames.nova {
-    @include text-stroke(2, $nova);
+  @include text-stroke(2, $nova);
 }
 
 .house_nicknames.vela {
-    @include text-stroke(2, $vela);
+  @include text-stroke(2, $vela);
 }
 
 .house_nicknames.pyxis {
-    @include text-stroke(2, $pyxis);
+  @include text-stroke(2, $pyxis);
 }
 
 .house_nicknames.auryx {
-    @include text-stroke(2, $auryx);
+  @include text-stroke(2, $auryx);
 }
 
 .house_lore {
-    flex: 1 0 35%;
-    letter-spacing: 0.5px;
-    text-align: justify;
-    font-family: "Andale Mono", "Consolas", "Courier New", monospace;
-    //font-size: 1.5em;
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
-    margin: 2% 1%;
-    @include md {
-        order: 3;
-        max-width: 50%;
-        float: right;
-        display: inline-block;
-    }
-    @include sm {
-        order: 3;
-        margin: 5% 1%;
-    }
+  flex: 1 0 35%;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  font-family: "Andale Mono", "Consolas", "Courier New", monospace;
+  //font-size: 1.5em;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  margin: 2% 1%;
+  @include md {
+    order: 3;
+    max-width: 50%;
+    float: right;
+    display: inline-block;
+  }
+  @include sm {
+    order: 3;
+    margin: 5% 1%;
+  }
 }
 
 .backgrounds {
-    position: fixed;
-    z-index: -9001;
-    top: 0;
-    left: 0;
+  position: fixed;
+  z-index: -9001;
+  top: 0;
+  left: 0;
 }
 
 .backgrounds img {
-    position: absolute;
-    overflow-x: hidden;
-    z-index: -9001;
-    min-width: calc(100vmax * 1.2);
-    top: 0;
-    left: 0;
-    transform: translate(-10%,-10%); //starting position
+  position: absolute;
+  overflow-x: hidden;
+  z-index: -9001;
+  min-width: calc(100vmax * 1.2);
+  top: 0;
+  left: 0;
+  transform: translate(-10%,-10%); //starting position
 }
 
 .contact-info {
-    @include md {
-        width: 50%;
-        display: inline-block;
-    }
-    @include sm {
-        width: 100%;
-    }
-    letter-spacing: 0.5px;
-    justify-content: center;
-    text-align: left !important;
-    font-family: "Andale Mono", "Consolas", "Courier New", monospace;
-    @include fluid-type($min_width, $max_width, $min_font, $max_font, 1.2);
-    font-size: 1.0em;
-    margin: 5% 1%;
+  @include md {
+    width: 50%;
+    display: inline-block;
+  }
+  @include sm {
+    width: 100%;
+  }
+  letter-spacing: 0.5px;
+  justify-content: center;
+  text-align: left !important;
+  font-family: "Andale Mono", "Consolas", "Courier New", monospace;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, 1.2);
+  font-size: 1.0em;
+  margin: 5% 1%;
 }
 
 #maps {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
 }
 
 #maps iframe {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#cluehint.hidden{
+  display: none;
+}
+
+#cluehint {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  max-width: 20vmax;
+  border:2px solid red;
+  font-size: 2em;
+  font-family: "Andale Mono", "Consolas", "Courier New", monospace;
+  display: inline-block;
+  background-color: white;
+  color: black;
 }
 
 body {
-    margin: 0;
-    width: 100%;
-    height: auto;
-    overflow-x: hidden;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
 }
 
 content {
-    width: 100%;
-    height: auto;
-    overflow-y: auto;
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
 }

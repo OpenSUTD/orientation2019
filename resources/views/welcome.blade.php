@@ -57,6 +57,9 @@
             </div>
             <div style="" class="subframe">
               <div id="logosection">
+                <div id="cluehint" class="hidden">
+                  To find what was lost, you must first go where others will tell you it is <span style="background-color:grey">Not Found</span>...
+                </div>
                 <img defer id="logo" src="{{asset('img/olethros.png')}}">
                 <span class="globeParent">@include("globe")</span>
               </div>
