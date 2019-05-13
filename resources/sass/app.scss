@@ -371,23 +371,23 @@ $auryx: #f68639;
   border: 0;
 }
 
-#cluehint.hidden{
+#cluehint.hidden {
   display: none;
 }
 
 #cluehint {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
-  @include md{
+  //transform: translate(0, -50%);
+  @include md {
     max-width: 20vmax;
     font-size: 2em;
   }
-  @include sm{
+  @include sm {
     max-height: 20vmax;
     font-size: 1em;
   }
-  border:2px solid red;
+  border: 2px solid red;
   font-family: "Andale Mono", "Consolas", "Courier New", monospace;
   display: inline-block;
   background-color: white;
