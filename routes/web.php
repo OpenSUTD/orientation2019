@@ -15,6 +15,34 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/404', function () {
+    return view('fake404');
+});
+
+Route::get('/404.php', function () {
+    return view('fake404');
+});
+
+Route::get('/404.html', function () {
+    return view('fake404');
+});
+
+Route::get('/NotFound', function () {
+    return view('fake404');
+});
+
+Route::get('/Notfound', function () {
+    return view('fake404');
+});
+
+Route::get('/notFound', function () {
+    return view('fake404');
+});
+
+Route::get('/notfound', function () {
+    return view('fake404');
+});
+
 Route::get('test', function () {
     $response = Telegram::getMe();
 
