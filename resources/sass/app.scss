@@ -406,3 +406,21 @@ content {
   height: auto;
   overflow-y: auto;
 }
+
+footer {
+  color: #fff;
+  background-color: #000;
+  letter-spacing: 0.5px;
+  justify-content: center;
+  text-align: left !important;
+  font-family: "Andale Mono", "Consolas", "Courier New", monospace;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font, 1.2);
+}
+
+footer .subframe div {
+  padding: 2vmin;
+}
+
+footer img {
+  height: 10vmin;
+}

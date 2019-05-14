@@ -178,7 +178,19 @@
           <img defer src="{{asset('img/frame_1.jpg')}}">
         </div>
       </content>
-      
+      <footer>
+        <div class="flex">
+          <div class="subframe">
+            <div>Organised By</div>
+            <img defer src="https://www.sutd.edu.sg/assets/sutd/img/logo-white.png">
+          </div>
+          <div class="subframe">
+            <div>Supported By</div>
+            <img defer src="{{asset('img/nic.jpg')}}">
+            <img defer src="{{asset('img/trendlink.jpg')}}">
+          </div>
+        </div>
+      </footer>
       <script defer async src="{{asset('js/app.js')}}"></script>
       <link href="{{asset('css/app.css')}}" rel="stylesheet" defer async/>
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" defer async>
