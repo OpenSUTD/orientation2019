@@ -21,3 +21,12 @@ Route::post('telegram/'.env('TELEGRAM_ENDPOINT_SECRET'), function (Request $requ
 
     return 'ok';
 });
+
+Route::post('try_puzzle/{id}', function (Request $request, $id) {
+    $puzzle = App\Puzzle::find($id);
+    if ($request->input('password') == $puzzle->password) {
+        return $puzzle->lore;
+    } else {
+        return str_random(255);
+    }
+});
